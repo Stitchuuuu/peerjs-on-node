@@ -1,6 +1,6 @@
 {
-  "name": "peerjs-on-node",
-  "version": "1.0.2",
+  "name": "@kevledev/peerjs-on-node",
+  "version": "1.0.0",
   "description": "nodejs wrtc + peerjs",
   "keywords": [
     "webrtc",
@@ -15,14 +15,18 @@
   "scripts": {},
   "main": "index.js",
   "devDependencies": {
-    "parcel": "^1.12.3"
+    "parcel": "^2.13.3"
   },
+  "type": "module",
   "dependencies": {
-    "blob-to-arraybuffer": "0.0.1",
+    "@msgpack/msgpack": "^3.0.0-beta2",
+    "@roamhq/wrtc": "^0.8.0",
+    "blob-to-arraybuffer": "^0.0.1",
+    "eventemitter3": "^5.0.1",
     "filereader": "^0.10.3",
-    "node-blob": "0.0.2",
-    "node-fetch": "^2.6.0",
-    "wrtc": "^0.4.2",
-    "ws": "^7.2.0"
+    "node-blob": "^0.0.2",
+    "node-fetch": "^3.3.2",
+    "peerjs-js-binarypack": "^2.1.0",
+    "ws": "^8.18.0"
   }
 }

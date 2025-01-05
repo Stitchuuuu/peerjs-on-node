@@ -1,14 +1,14 @@
-const wrtc = require('wrtc');
-RTCPeerConnection = wrtc.RTCPeerConnection;
-RTCIceCandidate = wrtc.RTCIceCandidate;
-RTCSessionDescription = wrtc.RTCSessionDescription;
+import wrtc from '@roamhq/wrtc'
+const RTCSessionDescription = wrtc.RTCSessionDescription
+const RTCIceCandidate = wrtc.RTCIceCandidate
+const RTCPeerConnection = wrtc.RTCPeerConnection
 
-fetch = require('node-fetch');
-WebSocket = require('ws');
-FileReader = require('filereader');
+import fetch from 'node-fetch'
+import WebSocket from 'ws'
+import FileReader from 'filereader'
+import Blob from 'node-blob'
+import blobToArraybuffer from 'blob-to-arraybuffer'
 
-Blob = require('node-blob');
-const blobToArraybuffer = require('blob-to-arraybuffer');
 Blob.prototype.arrayBuffer = function() {
     return blobToArraybuffer(this);
 }

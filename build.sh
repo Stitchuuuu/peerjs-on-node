@@ -7,16 +7,16 @@ exec 2>&1
 
 rm -rf dist/
 cd peerjs
+git apply ../patch/base_code_changes.diff
 
 # Generate a file documenting the changes made to peerjs source code for future reference
-git diff -- . ':(exclude)dist/*' > ../patch/base_code_changes.diff
 
 # Build the existing peerjs project into ../dist
-../node_modules/.bin/parcel build --no-source-maps lib/exports.ts -d ../dist --out-file peerjs.min.js
+../node_modules/.bin/parcel build --no-source-maps --target module
 cd ../
 
 # Append some of our modifications onto the built peerjs code
-cat patch/header_patch.js dist/peerjs.min.js patch/footer_patch.js > dist/peerjs-on-node.js
-rm dist/peerjs.min.js
+mkdir dist
+cat patch/header_patch.js peerjs/dist/bundler.mjs patch/footer_patch.js > dist/peerjs-on-node.js
 
 echo "Done. dist/peerjs-on-node.js"
