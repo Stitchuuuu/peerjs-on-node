@@ -9,8 +9,10 @@
     "peerjs",
     "p2p"
   ],
-  "repository": "https://github.com/Mantaseus/peerjs-on-node",
-  "author": "Mantaseus",
+  "repository": {
+    "url": "git+https://github.com/Stitchuuuu/peerjs-on-node.git"
+  },
+  "author": "KevLeDev",
   "license": "MIT",
   "scripts": {},
   "main": "index.js",

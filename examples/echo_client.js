@@ -1,15 +1,16 @@
-const Peer = require('../index.js').Peer;
+import { Peer } from '../index.js'
+import readline from 'node:readline'
 
 // FUNCTIONS --------------------------------------------------------------------------------------
 
-const readline = require('readline').createInterface({
+const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
 async function askForInput(promptStr){
     return new Promise((resolve, reject) => {
-        readline.question(promptStr, (input) => {
+        rl.question(promptStr, (input) => {
             resolve(input);
         });
     })

@@ -7,7 +7,7 @@ A port of the [PeerJS library](https://github.com/peers/peerjs) which currently 
 ## Install
 
 ```
-npm i --save peerjs-on-node
+npm i --save @kevledev/peerjs-on-node
 ```
 
 ## Usage
@@ -16,22 +16,13 @@ Just refer to the PeerJS documentation for a more detailed description of how th
 - Import the module like this
 
     ```
-    const Peer = require('peerjs-on-node').Peer;
+    import { Peer } from 'peerjs-on-node'
     ```
 
 ## Build history
 
 #### v1.0.0
 
-- Based on commit [0645dc3](https://github.com/peers/peerjs/commit/0645dc3ddd51cbc1649ed13af56d9b66958fd62b) of PeerJS
-- First release version that tries to make most of the peerJS functionality work on NodeJS
-- See file `patch/patch.diff` for all the modification made to the base PeerJS code and get it running on NodeJS
-- PeerJS code not included in this repo
-
-#### v1.0.1
-
-- Updated some documentation
-
-#### v1.0.2
-
-- Updated a bit more of the documentation
+- Based on commit [c073252](https://github.com/peers/peerjs/commit/c073252f879b57757f8a82d40302bbe06a3890e0) of PeerJS
+- First release version based on original peerjs-on-node
+- See file `patch/base_code_changes.diff` for all the modification made to the base PeerJS code and get it running on NodeJS
